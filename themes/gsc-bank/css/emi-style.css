@@ -1,0 +1,820 @@
+﻿
+
+
+/* Personal loan styles */
+.plBanner {
+    margin:0px 0 30px;
+    position:relative;
+}
+    .plBanner img {
+        width:100%;
+    }
+.aplNow-bn {
+    position:absolute;
+    top: 65%;
+    left: 10%;
+}
+.aplNow-bn a, .fdApply a {
+    background: #ae285d;
+    padding: 8px 15px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 5px 5px 0;
+    color:#fff;
+}
+.aplNow-bn a:hover, .aplNow-bn a:focus, .fdApply a:hover, .fdApply a:focus  {
+    text-decoration:none;
+}
+.brandCr {
+    color:#ae285d !important;
+}
+.loanHeading {
+    font-size:25px;
+    font-weight: 300;
+    margin-bottom: 20px;
+	padding: 0;
+}
+.paraGraph {
+    line-height:25px;
+}
+.calcSection {
+    margin: 15px 0px 0;
+    
+}
+.loanCalc {
+    display:flex;
+    border: solid 1px #d5d5d5;
+    padding: 0;
+}
+
+.calcSlider {
+    display:inline-block;
+}
+.totalBox {
+    background:#e1e4e9;
+    border-radius:4px;
+    margin: 20px 20px 20px 0;
+    padding: 20px;
+}
+.loanCalc label {
+    vertical-align:middle;
+}
+.loanCalc input.lnAmt{
+    float: right;
+    width: 30%;
+    border-radius: 5px;
+    border: solid 1px #d5d5d5;
+    padding: 0px 8px;
+    height: 28px;
+}
+.dragable {
+    margin:10px 0 35px;
+    position:relative;
+}
+.dragbg-gray {
+    background:#d5d5d5;
+    border-radius:10px;
+    width:100%;
+    height:5px;
+    margin: 20px 0 0;
+    box-shadow:inset 0 1px 2px rgba(0,0,0,.6);
+}
+.dragRed {
+    background: rgb(169,27,83);
+    background: linear-gradient(90deg, rgba(169,27,83,1) 0%, rgba(232,38,99,1) 100%);
+    width: 65%;
+    height: 5px;
+    border-radius: 10px;
+}
+.dragCircle {
+    background:#f6f6f6;
+    height:25px;
+    width:25px;
+    border-radius:50px;
+    position: relative;
+    left: 60%;
+    top: -16px;
+    border:solid 2px rgb(169,27,83);
+}
+.dragText {
+    margin: -12px 0 0;
+}
+.dragText span {
+    font-size:15px;
+    color:#ababab;
+}
+.emiHere {
+    font-weight:bold;
+    margin:20px 0 10px;
+}
+#semiChart path{
+	fill:none;
+	stroke-width: 0 !important;
+}
+
+/*.aplNow:before {
+    content:'';
+    position:absolute;
+    top:0;
+    left:50%;
+    width:0;
+    height:100%;
+    transform:translateX(-50%);
+    background:#f62a71;
+    transition:all .3s ease-in-out;
+    border-radius: 5px;
+}
+.aplNow:hover:before {
+    width:100%;
+    z-index:-1;
+}*/
+
+.aplNow {
+    position:relative;
+    background: #ae285d;
+    padding:8px;
+    font-size:16px;
+    text-align:center;
+    color:#fff !important;
+    display: block;
+    border-radius: 5px;
+    margin: 5px 0 0;
+    z-index:1;
+}
+.aplNow:hover, .aplNow:focus {
+        color:#fff;
+        text-decoration:none;
+    }
+.totalBox .finalResult {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.totalBox .finalResult span {
+    font-size:20px;
+    font-weight:600;
+    color:#323232;
+    display: inline-block;
+    padding: 0px 2px 10px;
+    }
+#lblEMIAmt {
+    font-size:30px;
+    color: #ae285d;
+}
+.rupee {
+    font-family: 'FontAwesome';
+    margin: 0 !important;
+    font-weight: 300 !important;
+    color: #333;
+    font-size: 15px;
+    padding:0 4px 0 0;
+	font-style:normal;
+}
+.fa-rupee:before,
+.fa-inr:before {
+  content: "\f156";
+}
+.mright {
+    margin-right:4px;
+}
+
+/* Donut Semi Chart*/
+/*#semiChart .highcharts-container {
+    height:168px !important;
+}
+svg.highcharts-root {
+        transform: translate(0%, -34%) !important;
+}*/
+.semiChart{
+        margin-top: 20px;
+        border: solid 1px #d5d5d5;
+        padding: 0 0 4px;
+}
+
+.highcharts-point.highcharts-color-0 {
+    fill:#ae285d !important;
+}
+.highcharts-point.highcharts-color-1 {
+    fill:#818181 !important;
+}
+.semiColmn {
+    border-bottom: solid 1px #d5d5d5;
+        padding: 0 15px;
+}
+.semiColmn:nth-last-child(1) {
+    border-bottom: none;
+    }
+.semiColmn span {
+    display: inline-block;
+    margin: 0 20px 0;
+    padding: 6px 2px;
+    font-weight: 600;
+}
+.tabHeading.breakHead {
+    margin: 10px 0 0;
+}
+span#princAmt{
+    color:#ae285d;
+}
+span#princAmt, span#intrAmt, span#totalPayAmt{
+    margin: 0 10px 0 0;
+}
+.princAmt .princClr:before {
+    content:'';
+    background:#ae285d;
+    width:8px;
+    height:8px;
+    display:inline-block;
+    margin: 0 8px 0 -16px;
+}
+.intAmt .intClr:before {
+    content:'';
+    background:#818181;
+    width:8px;
+    height:8px;
+    display:inline-block;
+    margin: 0 8px 0 -16px;
+}
+
+/* Amortisation Table */
+.amort {
+    margin-top: 10px;
+}
+.tabHeading {
+    font-size:26px;
+    font-weight:300;
+    margin: 20px 0 10px;
+}
+.amort .tableRow{
+    display:table-row;
+    margin:0;
+}
+.amort .table{
+    display:table;
+    margin:20px 0 0;
+    padding: 15px;
+    background:#e8e9ed;
+    font-weight:600;
+    font-size: 16px;
+}
+.amort .tableHead .tableCell{
+    padding: 5px 38px 15px 0;
+}
+.amort .tableCell{
+    display:table-cell;
+    border-bottom: solid 1px #c1bfc0;
+    padding: 12px 0;
+}
+.wid20 {
+    width:20%;
+}
+.wid16 {
+    width:16%;
+}
+select.selDrop {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 2px 30px 2px 2px;
+    border: none;
+    background: none;
+    position: relative;
+    left: 20px;
+}
+select.selDrop::after {
+  content: "";
+  border-top: 0.3em solid #999;
+  border-right: 0.3em solid transparent;
+  border-left: 0.3em solid transparent;
+  position: absolute;
+  top: 35%;
+  right: 20px;
+}
+/* For IE10 */
+select::-ms-expand {
+  display: none;
+}
+.mobTableCell i{
+    color: #ae285d;
+    pointer-events: none;
+}
+
+ul.plEMI-list li{margin:0 15px;float:left;list-style:disc;}
+
+ul.plEMI-list, ul.emiBenf {
+    margin:0 0 10px;
+    padding:0;
+    display: inline-block;
+}
+ul.emiBenf li{
+    color: #858585;
+    list-style:square !important;
+}
+ul.emiBenf li:before{
+    content: '';
+    background: none !important;
+}
+
+.highcharts-exporting-group, .highcharts-credits{
+    display: none;
+}
+
+/* Table for mob */
+.amort .mobTable {
+    padding: 15px;
+    background:#e8e9ed;
+    font-weight:600;
+    font-size: 16px;
+    display: inline-block;
+    width: 100%;
+}
+.mobTable .mobRow {
+    border-bottom: solid 1px #c1bfc0;
+}
+.mobTable .mobTableCell {
+    width:49%;
+    padding: 5px 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Frequently questions */
+.freSection {
+    border: solid 1px #d5d5d5;
+    padding:15px;
+    margin: 25px 0 0;
+}
+.freSection ul {
+    margin:0;
+    padding: 0 0 0 40px;
+}
+.freSection ul li{         
+    margin:10px 0;
+    list-style: none;
+    
+}
+.freSection ul li span {
+    font-weight:bold;
+    margin: 5px 0 8px;
+    display: inline-block;
+}
+.freSection ul li p {
+    color:#858585;
+    line-height: 25px;
+    margin: 0 0 5px;
+}
+.freSection ul li:before{         
+    content:'';
+    background:#f82a74;
+    width:10px;
+    height:10px;
+    border-radius:50px;
+    display: inline-block;
+    margin-left: -30px;
+    margin-right: 20px;
+}
+
+.mob-apply, .mob-apply-calc {
+    display:none;
+}
+.arrow-down, .arrow-up {
+    color:#ae285d;
+        font-size: 20px;
+        top: 2px;
+    position: relative;
+}
+.arrow-down:before {
+    content: "\f107";
+}
+.arrow-up:before {
+    content: "\f106";
+}
+.morecontent span {
+    display: none;
+}
+a.morelink {
+    display: inline-block;
+    color:#ae285d;
+    text-decoration:none;
+    margin:5px 0 15px;
+    font-size: 14px;
+}
+    a.morelink.less {
+        display:block;
+        margin:0px 0 15px;
+    }
+    a.morelink.less:hover, a.morelink.less:focus {
+        color:#ae285d;
+        text-decoration:none;
+    }
+.mrgBtm {
+    margin: 0 0 15px !important;
+}
+.mrgTpBtm {
+    margin:15px 0 !important;
+}
+.mrgTp{
+    margin-top: 10px;
+}
+
+
+
+
+
+    /*.tenureSel:last-child {
+        margin: 0 !important;
+    }*/
+
+    .tenureSel input {
+        width: 100%;
+        border-radius: 5px;
+        padding: 4px 6px;
+        border: 1px solid #d5d5d5;
+    }
+
+.typeOf {
+    position: relative;
+    float: right;
+    width: 57%;
+    margin:0;
+}
+
+    .typeOf select, .tenureSel select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 5px;
+        padding: 3px 6px;
+        border: 1px solid #d5d5d5;
+        background: none;
+        position: relative;
+        font-family: Lato;
+        width: 100%;
+        cursor: pointer;
+    }
+
+.currentDate {
+    float: right;
+    color: #ae285d;
+    font-weight: 600;
+}
+
+.matDtl {
+    background: #fff;
+    margin: 0;
+    padding: 5px 0 15px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+   
+
+.hideY {
+    visibility: hidden;
+}
+
+.fdCalc .dragText {
+    margin: 0px 0 0;
+}
+
+.dskRight {
+    float: right;
+}
+.column {
+    clear:both;
+    text-align: left;
+}
+#fdGraph svg.highcharts-root {
+    transform: translate(-4%, -20%) !important;
+}
+#fdGraph .highcharts-title, #fdGraph .highcharts-subtitle {
+    display:none;
+}
+#fdGraph .highcharts-container {
+    height: 320px !important;
+}
+.fdGraph {
+    margin-top: 20px;
+    border: solid 1px #d5d5d5;
+    padding: 0 0 10px;
+}
+#fdGraph .highcharts-axis-labels.highcharts-yaxis-labels, #fdGraph path.highcharts-grid-line {
+    display:none;
+}
+#fdGraph .highcharts-point.highcharts-color-0 {
+    width:15px;
+    transform: translateX(2%);
+}
+#fdGraph .highcharts-data-label-color-0 {
+}
+.fdBenf{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 15px 0 10px;
+}
+/* Eligibility Calc */
+.loanCalc.elg .totalBox .finalResult{
+    top: 0;
+    left: 0;
+    transform: inherit;
+}
+.loanCalc.elg .ionSlider.newCalc {
+    padding: 0 0px 15px 5px;
+}
+.totalOth h4{
+    margin: 30px 0 15px;
+}
+.loanCalc.elg .finalResult span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #323232;
+    display: inline-block;
+    padding: 0px 2px 10px;
+}
+.loanCalc.elg .finalResult span:first-child{
+    margin: 20px 0 0;
+}
+.extHead{
+    margin: 15px 0 0;
+    font-weight: 600;
+}
+
+
+
+.totalBox.finalResult span {
+    font-size: 20px;
+    font-weight: 600;
+    color: #323232;
+    display: block;
+    padding: 0px 2px 10px;
+}
+.totalBox.finalResult{
+    padding: 50px 30px;
+}
+#elgAmount{
+    font-size: 30px;
+    color: #97144c;
+    text-align: center;
+}
+.loanCalc.elg .inpt-slider label{
+    margin: 0 20px 0 0;
+}
+.blur{
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+
+
+/* Personal loan Res styles */
+@media (max-width:767px) {
+	.otherInfoBlocks .progressBlog .linkDiv.noborder{
+		top:0;
+		margin:10px 0;
+	}
+    .calcSection {
+        padding: 0 15px;
+        margin:0;
+    }
+    .loanCalc, .lifeCalc {
+    display:inline-block;
+}
+.life-insBg{
+    box-shadow: inset 0px 4px 10px rgba(0,0,0,0.1);
+}
+.life-insBg .lifeResult{
+    width: 100%;
+    margin: 40px 0;
+    transform: inherit;
+}
+.resultArw{
+    top: 0;
+    left: 50%;
+    border-top: 10px solid #fff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    transform: translateX(-50%);
+    filter: drop-shadow(0px 5px 0px #d2d2d2);
+}
+    .totalBox .finalResult {
+    top: 0;
+    left: 0;
+    transform: inherit;
+}
+    .totalBox {
+     margin: 10px 0 20px 15px;
+     width: 91%;
+    }
+    .loanCalc .ionSlider.newCalc {
+    padding: 0;
+}
+
+
+    .freSection ul {
+    padding: 0 25px;
+}
+    .freSection ul li:before {
+    margin-left: -25px;
+    margin-right: 15px;
+    vertical-align: top;
+    margin-top: 12px;
+    }
+    .tabHeading.breakHead {
+    margin: 20px 0 0;
+}
+    .aplNow-bn {
+    top: 50%;
+    left: 10%;
+}
+.aplNow-bn a{
+	display:block;
+}
+.mob-apply, .mob-apply-calc {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    background: #ae285d;
+    z-index: 2;
+}
+.mob-apply a, .mob-apply-calc a{
+  font-size:16px;
+  color:#fff;
+  text-decoration:none;
+}
+
+/* FD calc loan Res styles */
+
+.flRight {
+        float: right;
+    }
+
+    .dskRight {
+        float: none;
+    }
+
+    .typeOf {
+        float: none;
+        width: 100%;
+    }
+
+    .fdNames.block {
+        display: block;
+    }
+
+    .radioBtn input:checked + label, .radioBtn input:not(:checked) + label, .radioBtn.setMrg input:checked + label, .radioBtn.setMrg input:not(:checked) + label {
+        margin: 0;
+    }
+
+    .currentDate {
+        margin: 10px 0 0;
+    }
+
+    .tenureSel {
+        width: 31%;
+    }
+
+    .fdCalc .totalBox {
+        margin: 0px 0 20px 15px;
+        width: 91%;
+    }
+
+        .fdCalc .totalBox .finalResult {
+            top: 0;
+            left: 0;
+            transform: inherit;
+            margin: 0;
+            padding: 15px;
+        }
+
+    .loanCalc.fdCalc .ionSlider.newCalc {
+        padding: 0 20px 0px 5px;
+    }
+	.loanHeading.intHeading {
+    margin-top: 20px;
+}
+
+}
+@media (min-width:992px) and (max-width:1124px){
+	.loanCalc.fdCalc .ionSlider.newCalc .inpt-slider .irs-with-grid{
+		top:15px;
+	}
+	.loanCalc.fdCalc .dragText {
+    margin: 30px 0 0;
+}
+}
+
+@media (max-width:992px) {
+    ul.plEMI-list li {
+        float: none;
+    }
+
+    .lifeCalc {
+    display:inline-block;
+}
+   
+.life-insBg{
+    box-shadow: inset 0px 4px 10px rgba(0,0,0,0.1);
+}
+.life-insBg .lifeResult{
+    width: 100%;
+    margin: 40px 0;
+    transform: inherit;
+}
+.resultArw{
+    top: 0;
+    left: 50%;
+    border-top: 10px solid #fff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    transform: translateX(-50%);
+    filter: drop-shadow(0px 5px 0px #d2d2d2);
+}
+.emibnrOverlay{
+		background:rgba(0,0,0,.3);
+		width:100%;
+		height:100%;
+		position:absolute;
+	}
+	.fd-bannerTxt h2, .fd-bannerTxt p{
+		color:#fff;
+	}
+}
+
+@media (max-width:1024px) {
+    .tabHeading {
+        font-size: 25px;
+    }
+	.intFd{
+        margin: 0 0 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+.fa {
+    font-family: FontAwesome;
+    font-style: normal;
+}
+.fa-trash-o:before {
+    content: "\f014";
+}
+.rmvOrnam{
+    top: 50%;
+    transform: translateY(22%);
+    position: relative;
+    display: block;
+    float: right;
+}
+.rmvOrnam a.removeBtn{
+    font-size: 25px;
+    color: #97144c;
+    text-decoration: none;
+}
+a.addMoreRow{
+    background: #97144c;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    float: right;
+    margin: 0px 0 20px;
+    text-decoration: none;
+}
+a.addMoreRow:hover{
+    color: #fff;
+    text-decoration: none;
+}
+.rightAddmoreBtn{
+    float: right;
+}
+.repeatInput{
+    float: right;
+    width: 43% !important;
+}
+.repeatInput select{
+    width: 35% !important;
+    margin: 0 0 0 10px;
+}
+.repeatInput label{
+    font-family: Lato;
+    font-size: 18px !important;
+}
+.donutChart .highcharts-halo{
+    fill: none;
+}
+.ui-datepicker{
+	opacity:0;
+}
+

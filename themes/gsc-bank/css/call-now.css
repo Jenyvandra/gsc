@@ -1,0 +1,34 @@
+.offerreverse {
+    position: fixed;
+    transform: scale(1) rotateY(360deg) translateZ(5px);
+}
+
+.offerreverse {
+    outline: medium none;
+    position: absolute;
+    right: 5px;
+    top: -25px;
+    transition: all 1s ease 0s;
+    z-index: 10000;
+}
+
+.animation360 {
+    outline: medium none;
+    position: fixed;
+    right: 5px;
+    top: -25px;
+    transform: scale(1) rotateY(0deg) translateZ(5px);
+    transition: all 1s ease 0s;
+    z-index: 10000;
+}
+
+
+.offerreverse:hover {
+    transform: scale(1) rotate(0deg) translateY(30px);
+    z-index: 1000;
+}
+
+.offerreverse {
+    position: fixed;
+    transform: scale(1) rotateY(360deg) translateZ(5px);
+}
